@@ -1,0 +1,26 @@
+programa {
+  funcao inicio() {
+  inteiro a, b, c, soma
+
+   escreva("Digite o primeiro valor: ")
+   leia(a)
+   escreva("Digite o segundo valor: ")
+   leia(b)
+   escreva("Digite o terceiro valor: ")
+   leia(c)
+  
+   soma = (a + b)
+   escreva("Soma: ", soma)
+  
+   limpa()
+   escreva("\n=== Exibindo resultados. ==-")
+   se (a + b < c) {
+      escreva("\na + b é menor que c.")
+   } senao se (a + b > c) {
+      escreva("\na + b é maior que c." )
+   } senao {
+    escreva("\na, b e c são iguais.")
+   }
+
+  }
+}
