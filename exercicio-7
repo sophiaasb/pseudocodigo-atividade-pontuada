@@ -1,0 +1,40 @@
+programa {
+  funcao inicio() {
+    cadeia nome
+    inteiro quantidade, desconto
+    real precoUnitario, precoTotal, totalPagar
+
+  escreva("Digite o nome do produto: ")
+  leia(nome)
+  escreva("Digite a quantidade adquirida: ")
+  leia(quantidade)
+  escreva("Digite o preço unitário: R$ ")
+  leia(precoUnitario)
+
+  precoTotal = quantidade * precoUnitario
+  totalPagar = precoTotal - desconto
+
+ se (quantidade <= 5) {
+ desconto = 2/100
+ totalPagar = precoTotal - 2/100
+ escreva("Desconto: 2%")
+} senao se (10 <= quantidade > 5) {
+desconto = 5/100
+ totalPagar = precoTotal - 3/100 
+ escreva("Desconto: 5%")
+} senao se (quantidade > 10) {
+ desconto = 10/100
+ totalPagar = precoTotal - 5/100
+ escreva("Desconto 10%")
+}
+
+limpa()
+escreva("=== Exibindo dados ===")
+escreva("Nome do produto: ", nome)
+escreva("Quantidade: ", quantidade)
+escreva("Preço unitário: ", precoUnitario)
+escreva("Desconto: ", desconto)
+escreva("Total a pagar: ", totalPagar)
+
+}
+}
