@@ -4,7 +4,7 @@ programa {
     caracter sexo
     inteiro tempoDeCasada
 
-    escreva("Digite o nome do usu·rio: ")
+    escreva("Digite o nome do usu√°rio: ")
     leia(nome)
     escreva("Digite seu sexo utilizando M ou F: ")
     leia(sexo)
@@ -20,7 +20,7 @@ programa {
     
   
   limpa()
-  ("===Exibindo dados para o usu·rio. ===")
+  ("===Exibindo dados para o usu√°rio. ===")
   escreva("Nome: ", nome)
   escreva("\nSexo: ", sexo)
   escreva("\nEstado civil: ", estadoCivil)
