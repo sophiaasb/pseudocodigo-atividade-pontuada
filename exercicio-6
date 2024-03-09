@@ -14,14 +14,14 @@ programa {
 
    limpa()
    escreva("=== Exibindo resultados ===")
-   escreva("\nMédia Aritmética: ", media)
+   escreva("\nMÃ©dia AritmÃ©tica: ", media)
 
    se (media >= 6.0) {
-    escreva("\nParabéns! Você está aprovado.")
+    escreva("\nParabÃ©ns! VocÃª estÃ¡ aprovado.")
    } senao se (6.0 > media < 4.0) {
-    escreva("\nVocê está em recuperação.") 
+    escreva("\nVocÃª estÃ¡ em recuperaÃ§Ã£o.") 
    } senao {
-    escreva("\nVocê está reprovado.")
+    escreva("\nVocÃª estÃ¡ reprovado.")
    }
 
   }
