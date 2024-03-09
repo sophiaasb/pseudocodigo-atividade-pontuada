@@ -7,7 +7,7 @@ programa {
     leia(a)
     escreva("Digite o valor de B: ")
     leia(b)
-    escreva("Digite a operaÁ„o escolhida: ")
+    escreva("Digite a opera√ß√£o escolhida: ")
     leia(operacao)
 
     escolha (operacao) {
@@ -24,7 +24,7 @@ programa {
     resultado = a / b
     pare
     caso contrario :
-    escreva("A operaÁ„o digitada È inv·lida!")  
+    escreva("A opera√ß√£o digitada √© inv√°lida!")  
     }
 
     limpa()
