@@ -4,7 +4,7 @@ programa {
     inteiro preco
 
     escreva("\n\t\t\tTABELA")
-    escreva("\nCor \t\t\t\t\t Preço")
+    escreva("\nCor \t\t\t\t\t PreÃ§o")
     escreva("\nVerde \t\t\t R$ 10,00")
     escreva("\nAzul \t\t\t\t R$ 20,00")
     escreva("\nAmarelo \t\t R$ 30,00")
