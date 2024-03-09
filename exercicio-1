@@ -15,11 +15,11 @@ programa {
    limpa()
    escreva("\n=== Exibindo resultados. ==-")
    se (a + b < c) {
-      escreva("\na + b È menor que c.")
+      escreva("\na + b √© menor que c.")
    } senao se (a + b > c) {
-      escreva("\na + b È maior que c." )
+      escreva("\na + b √© maior que c." )
    } senao {
-    escreva("\na, b e c s„o iguais.")
+    escreva("\na, b e c s√£o iguais.")
    }
 
   }
