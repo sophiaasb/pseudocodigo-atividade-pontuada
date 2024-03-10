@@ -1,40 +1,39 @@
 programa {
   funcao inicio() {
     cadeia nome
-    inteiro quantidade, desconto
-    real precoUnitario, precoTotal, totalPagar
+    inteiro desconto, quantidade
+    real precoUnitario, totalPagar, precoTotal
 
-  escreva("Digite o nome do produto: ")
-  leia(nome)
-  escreva("Digite a quantidade adquirida: ")
-  leia(quantidade)
-  escreva("Digite o preço unitário: R$ ")
-  leia(precoUnitario)
+escreva("Nome do produto: ")
+leia(nome)
+escreva("Quantidade: ")
+leia(quantidade)
+escreva("Preço unitário: R$ ")
+leia(precoUnitario)
 
-  precoTotal = quantidade * precoUnitario
-  totalPagar = precoTotal - desconto
-
- se (quantidade <= 5) {
- desconto = 2/100
- totalPagar = precoTotal - 2/100
- escreva("Desconto: 2%")
-} senao se (10 <= quantidade > 5) {
-desconto = 5/100
- totalPagar = precoTotal - 3/100 
- escreva("Desconto: 5%")
-} senao se (quantidade > 10) {
- desconto = 10/100
- totalPagar = precoTotal - 5/100
- escreva("Desconto 10%")
-}
+precoTotal = quantidade * precoUnitario
 
 limpa()
-escreva("=== Exibindo dados ===")
-escreva("Nome do produto: ", nome)
-escreva("Quantidade: ", quantidade)
-escreva("Preço unitário: ", precoUnitario)
-escreva("Desconto: ", desconto)
-escreva("Total a pagar: ", totalPagar)
 
+se (quantidade <= 5) {
+desconto = 2
+escreva("\nDesconto: 2%")
+} senao se (5 < quantidade <= 10) {
+desconto = 3 
+escreva("\nDesconto: 3%")
+} senao {
+desconto = 5
+escreva("\nDesconto: 5%")
 }
+
+totalPagar = precoTotal - (precoTotal * desconto/100)
+
+escreva("\n=== Exibindo dados ===")
+escreva("\nNome do produto: ", nome)
+escreva("\nQuantidade: ", quantidade)
+escreva("\nPreço unitário: R$ ", precoUnitario)
+escreva("\nPreço total: R$ ", precoTotal)
+escreva("\nValor total: ", totalPagar)
+
+  }
 }
