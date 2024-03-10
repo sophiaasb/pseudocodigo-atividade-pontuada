@@ -1,44 +1,47 @@
 programa {
   funcao inicio() {
-    inteiro peso, numero
-    real preco, valorTotal
     cadeia fruta
-    
-    escreva("\n\t\t\t\t\t\t\t\tFRUTAS")
+    real peso, preco, valorTotal
+
+    escreva("FRUTAS")
     escreva("\n\t\t\t\t\t\t\t\taté 5kg \t\t\t\tacima de 5kg")
-    escreva("\nMorango \t\tR$ 2,50 por kg \t\t R$ 2,20 por kg")
-    escreva("\nMaçã \t\t\t\tR$ 1,80 por kg \t\t R$ 1,50 por kg")
+    escreva("\nMorango \t\tR$ 2.50 por kg \t\t R$ 2.20 por kg")
+    escreva("\nMaçã \t\t\t\tR$ 1.80 por kg \t\t R$ 1.50 por kg")
 
     escreva("\n\nDigite a fruta desejada: ")
     leia(fruta)
     escreva("Digite quantos kilogramas deseja: ")
     leia(peso)
 
-   escolha(fruta) {
-    caso "morango" e peso <= 5:
-    valorTotal = peso * 2.50 
+    escolha(fruta) {
+    caso "Morango":
+    peso <= 5
+    preco = 2.50 
     pare
-    caso "morango" e peso > 5:
-    valorTotal = peso * 2.20
+    caso "Maçã":
+    peso <= 5
+    preco = 1.80
     pare
-    caso "maçã" e peso <= 5:
-    valorTotal = peso * 1.80
+    caso "Morango":
+    peso > 5
+    preco = 2.20
+    caso "Maçã":
+    peso > 5
+    preco = 1.50
     pare
-    caso "maçã" e peso > 5:
-    valorTotal = peso * 1.50
-    pare
-   }
+    }
 
-   se (peso > 8 ou valorTotal > 25.00) {
-    valorTotal - 10%
-   } senao {
     valorTotal = peso * preco
-   }
 
-    limpa()
-    escreva("\n=== Exibindo resultados ===")
+   limpa()
+    escreva("\n=== Exibindo dados ===")
     escreva("\n\nFruta escolhida: ", fruta)
     escreva("\nQuantidade de frutas: ", peso, " Kg")
     escreva("\nTotal a pagar: R$ ", valorTotal)
+    
+    se (peso >= 8 ou valorTotal >= 25.00) {
+    escreva("\nDesconto: 10%")
+    escreva("\nTotal a pagar: R$", valorTotal - 10)
+    } 
     }
 }
