@@ -1,7 +1,8 @@
 programa {
   funcao inicio() {
-    cadeia fruta
-    real peso, preco, valorTotal
+      cadeia fruta
+    inteiro desconto
+    real peso, preco, valorTotal, valorDesconto
 
     escreva("FRUTAS")
     escreva("\n\t\t\t\t\t\t\t\taté 5kg \t\t\t\tacima de 5kg")
@@ -40,8 +41,10 @@ programa {
     escreva("\nTotal a pagar: R$ ", valorTotal)
     
     se (peso >= 8 ou valorTotal >= 25.00) {
+    desconto = 10
+    valorDesconto = valorTotal - (valorTotal * desconto/100)
     escreva("\nDesconto: 10%")
-    escreva("\nTotal a pagar: R$", valorTotal - 10)
+    escreva("\nTotal a pagar: R$", valorDesconto)
     } 
     }
 }
