@@ -1,0 +1,29 @@
+programa {
+  funcao inicio() {
+ cadeia nome
+    inteiro quantidade
+    real valorTotalEmprestimo, rendaMensal, valorPrestacao
+
+    escreva("Digite o nome do solicitante: ")
+    leia(nome)
+    escreva("Digite o valor da renda mensal: R$ ")
+    leia(rendaMensal)
+    escreva("Digite o valor total do empréstimo: R$ ")
+    leia(valorTotalEmprestimo)
+    escreva("Digite o número de prestações a pagar: ")
+    leia(quantidade)
+
+    escolha(rendaMensal) {
+    caso valorTotalEmprestimo == rendaMensal * 10:
+    escreva("O empréstimo poderá ser concedido.") 
+    pare
+    caso valorPrestacao >= rendaMensal * 30:
+    escreva("O empréstimo poderá ser concedido.") 
+    pare
+    caso contrario:
+    escreva("O empréstimo não poderá ser concedido.")
+    pare
+    }
+
+  }
+}
