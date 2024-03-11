@@ -1,8 +1,8 @@
 programa {
   funcao inicio() {
- cadeia combustivel
-  inteiro quantidade, desconto
-  real preco, precoTotal, totalPagar
+  cadeia combustivel
+  inteiro descontoA, descontoG
+  real litros, preco, precoTotal, totalPagarA, totalPagarG
 
   escreva("Preços por litro")
   escreva("\nA-Álcool: R$ 3.79")
@@ -16,41 +16,40 @@ programa {
   escreva("\n\nTipo de combustível: ")
   leia(combustivel)
   escreva("Quantidade de litros: ")
-  leia(quantidade)
+  leia(litros)
 
-  precoTotal = quantidade * preco
-
-  escolha(quantidade) {
-  caso "A":
+  se (combustivel == "A") {
   preco = 3.79
-  quantidade <= 25
-  desconto = 2
-  totalPagar - (precoTotal * desconto/100)
-  pare
-  caso "A":
-  preco = 3.79 
-  quantidade > 25
-  desconto = 4
-  totalPagar - (precoTotal * desconto/100)
-  caso "G":
+  } senao se (combustivel == "G") {
   preco = 6.59
-  quantidade <= 25
-  desconto = 3
-  totalPagar - (precoTotal * desconto/100)
-  pare
-  caso "G":
-  preco = 6.59
-  quantidade > 25
-  desconto = 5
-  totalPagar - (precoTotal * desconto/100)
-  pare
   }
 
+  precoTotal = litros * preco
+  
   limpa()
   escreva("\n=== Exibindo dados ===")
   escreva("\nTipo de combustível: ", combustivel)
-  escreva("\nQuantidade de litros: ", quantidade, " L")
-  escreva("\nValor a pagar: R$ ", totalPagar)
+  escreva("\nQuantidade de litros: ", litros, " L")
+  escreva("\nValor a pagar: R$ ", precoTotal)
+
+  escolha(litros) {
+  caso litros <= 25:
+  descontoA = precoTotal * 0.02
+  totalPagarA = precoTotal - descontoA
+  escreva("\nValor total com desconto: ", totalPagarA)
+  descontoG = precoTotal * 0.03
+  totalPagarG = precoTotal - descontoG
+  escreva("\nValor total com desconto: ", totalPagarG)
+  pare
+  caso litros > 25:
+  descontoA = precoTotal * 0.04
+  totalPagarA = precoTotal - descontoA
+  escreva("\nValor total com desconto: ", totalPagarA)
+  descontoG = precoTotal * 0.05
+  totalPagarG = precoTotal - descontoG
+  escreva("\nValor total com desconto: ", totalPagarG)
+  pare
+  }
 
   }
 }
